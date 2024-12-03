@@ -57,16 +57,6 @@ const AddTask = () => {
                     name="etat"
                 />
             </InputGroup>
-            <InputGroup className="mb-3">
-                <InputGroup.Text id="basic-addon4">User</InputGroup.Text>
-                <Form.Control
-                    placeholder="User"
-                    aria-label="User"
-                    aria-describedby="basic-addon4"
-                    onChange={handleChange}
-                    name="user"
-                />
-            </InputGroup>
             <Form.Control type="submit" value="Ajouter" className="btn btn-primary"/>
         </Form>
     </Container>;
