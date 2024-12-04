@@ -21,7 +21,8 @@ function getUser(){
         const decodedToken = jwtDecode(token);  
         return {
             id: decodedToken.id,
-            email : decodedToken.email
+            email : decodedToken.email,
+            role : decodedToken.role
         }
     }else{
        return {}; 

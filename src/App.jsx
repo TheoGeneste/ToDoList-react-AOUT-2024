@@ -9,6 +9,8 @@ import LoginPage from './Pages/LoginPage';
 import AuthContext from './Context/AuthContext';
 import { useState } from 'react';
 import AuthService from './Services/AuthService';
+import RouteSecu from './Components/RouteSecu';
+import Users from './Pages/Users';
 
 
 function App() {
@@ -18,9 +20,18 @@ function App() {
   return <>
     <AuthContext.Provider value={{isAuthenticated, setIsAuthenticated, user, setUser}}>
       <BrowserRouter>
-        <Routes>    
-          <Route path="/" element={<HomePage />}/>
-          <Route path='/add' element={<AddTask />} />
+        <Routes> 
+
+
+
+          <Route element={<RouteSecu/>}>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/add' element={<AddTask />} />
+            <Route path='/users' element={<Users />} />
+
+          </Route>  
+
+
 
           <Route path='/login' element={<LoginPage />} />
         </Routes>
